@@ -7,14 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F206289B1EBE822F0091609E /* IncorrectBuzz.wav in Resources */ = {isa = PBXBuildFile; fileRef = F206289A1EBE822F0091609E /* IncorrectBuzz.wav */; };
+		F206289D1EBE82470091609E /* CorrectDing.wav in Resources */ = {isa = PBXBuildFile; fileRef = F206289C1EBE82470091609E /* CorrectDing.wav */; };
 		F259E2251EA136EA00A280A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F259E2241EA136EA00A280A9 /* AppDelegate.swift */; };
 		F259E2271EA136EA00A280A9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F259E2261EA136EA00A280A9 /* ViewController.swift */; };
 		F259E22A1EA136EA00A280A9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F259E2281EA136EA00A280A9 /* Main.storyboard */; };
 		F259E22C1EA136EA00A280A9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F259E22B1EA136EA00A280A9 /* Assets.xcassets */; };
 		F259E22F1EA136EA00A280A9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F259E22D1EA136EA00A280A9 /* LaunchScreen.storyboard */; };
+		F259E2371EA1408300A280A9 /* events.swift in Sources */ = {isa = PBXBuildFile; fileRef = F259E2361EA1408300A280A9 /* events.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F206289A1EBE822F0091609E /* IncorrectBuzz.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = IncorrectBuzz.wav; sourceTree = "<group>"; };
+		F206289C1EBE82470091609E /* CorrectDing.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = CorrectDing.wav; sourceTree = "<group>"; };
 		F259E2211EA136EA00A280A9 /* BoutTime App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BoutTime App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F259E2241EA136EA00A280A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F259E2261EA136EA00A280A9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +27,7 @@
 		F259E22B1EA136EA00A280A9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F259E22E1EA136EA00A280A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F259E2301EA136EA00A280A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F259E2361EA1408300A280A9 /* events.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = events.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,10 +62,13 @@
 			children = (
 				F259E2241EA136EA00A280A9 /* AppDelegate.swift */,
 				F259E2261EA136EA00A280A9 /* ViewController.swift */,
+				F259E2361EA1408300A280A9 /* events.swift */,
 				F259E2281EA136EA00A280A9 /* Main.storyboard */,
 				F259E22B1EA136EA00A280A9 /* Assets.xcassets */,
 				F259E22D1EA136EA00A280A9 /* LaunchScreen.storyboard */,
 				F259E2301EA136EA00A280A9 /* Info.plist */,
+				F206289C1EBE82470091609E /* CorrectDing.wav */,
+				F206289A1EBE822F0091609E /* IncorrectBuzz.wav */,
 			);
 			path = "BoutTime App";
 			sourceTree = "<group>";
@@ -98,6 +107,11 @@
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 832845V3EK;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -124,7 +138,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F206289D1EBE82470091609E /* CorrectDing.wav in Resources */,
 				F259E22F1EA136EA00A280A9 /* LaunchScreen.storyboard in Resources */,
+				F206289B1EBE822F0091609E /* IncorrectBuzz.wav in Resources */,
 				F259E22C1EA136EA00A280A9 /* Assets.xcassets in Resources */,
 				F259E22A1EA136EA00A280A9 /* Main.storyboard in Resources */,
 			);
@@ -139,6 +155,7 @@
 			files = (
 				F259E2271EA136EA00A280A9 /* ViewController.swift in Sources */,
 				F259E2251EA136EA00A280A9 /* AppDelegate.swift in Sources */,
+				F259E2371EA1408300A280A9 /* events.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,10 +278,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 832845V3EK;
 				INFOPLIST_FILE = "BoutTime App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Callum-Obrien.BoutTime-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -274,10 +293,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 832845V3EK;
 				INFOPLIST_FILE = "BoutTime App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Callum-Obrien.BoutTime-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -300,6 +321,7 @@
 				F259E2351EA136EA00A280A9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
